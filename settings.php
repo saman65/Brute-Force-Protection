@@ -1,8 +1,9 @@
-<?php ob_start(); ?>
-<?php include "db.php" ?>
-<?php include "functions.php" ?>
-<?php DeleteQueryAttempts(); ?>
 <?php
+ob_start();
+include "db.php"
+include "functions.php"
+DeleteQueryAttempts();
+
 if(isset($_POST['update_security'])){
    // Perform validation and anti-brute force measures
    antiBruteForce("../error.php");
