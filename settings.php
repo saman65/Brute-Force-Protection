@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <?php include "db.php" ?>
 <?php include "functions.php" ?>
-
+<?php DeleteQueryAttempts(); ?>
 <?php
 if(isset($_POST['update_security'])){
    // Perform validation and anti-brute force measures
