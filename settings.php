@@ -1,4 +1,6 @@
-<?php include "includes/admin_header.php" 
+<?php ob_start(); ?>
+<?php include "db.php" ?>
+<?php include "functions.php" ?>
 
 <?php
 if(isset($_POST['update_security'])){
