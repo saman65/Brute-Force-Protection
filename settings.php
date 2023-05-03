@@ -1,5 +1,5 @@
-<?php ob_start(); ?>
-<?php include db.php ?>
+<?php include "includes/admin_header.php" 
+
 <?php
 if(isset($_POST['update_security'])){
    // Perform validation and anti-brute force measures
