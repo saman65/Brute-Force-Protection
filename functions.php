@@ -49,3 +49,14 @@ function antiBruteForce($location){
         exit;
     }
 }
+
+function DeleteQueryAttempts (){
+  global $connection;
+  global $config;
+  $delete_old_attempts = $config['antibrute_config']['delete_old_attempts'];
+  $timestamp = date("Y-m-d H:i:s", strtotime("$delete_old_attempts seconds"));
+  $ip_address = $_SERVER['REMOTE_ADDR'];
+  $stmt = $connection->prepare("DELETE FROM query_attempts WHERE ip_address = ? AND timestamp < ? ");
+  $stmt->bind_param('ss', $ip_address, $timestamp);
+  $stmt->execute();
+}
