@@ -1,3 +1,4 @@
+<?php include db.php ?>
 <div class='col-lg-6 col-md-6'><form action="" method="post" enctype="multipart/form-data" onSubmit="return confirm('Change security settings carefully!');" ?>
                <h3 class="modal-title">
             Security
